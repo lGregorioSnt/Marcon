@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  /* 🎯 BRAND */
+  --primary: #00509d;
+
+  /* 🧱 NEUTROS */
+  --bg: #F4F7FA;
+  --surface: #ffffff;
+
+  --text-primary: #1A1C1E;
+  --text-secondary: #64748B;
+
+  /* 🟢 STATUS */
+  --success: #2E7D32;
+  --danger: #D32F2F;
+
+  /* 🧩 UTILITÁRIOS */
+  --border: #E5E7EB;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+

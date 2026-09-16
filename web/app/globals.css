@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #1A1C1E;
+  --primary: #00509d;
+  --secondary: #1A1C1E;
+  --tertiary: #2563EB;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --light: #F8FAFC;
+  --medium: #94A3B8;
+  --dark: #1E293B;
+  --border: #E2E8F0;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-light: var(--light);
+  --color-medium: var(--medium);
+  --color-dark: var(--dark);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* Versão modernizada do HEAD: */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom utilities - Essenciais para os Cards e Botões do Front-end */
+.shadow-card {
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.shadow-card-hover {
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.rounded-card {
+  border-radius: 16px;
+}
+
+.btn-primary {
+  @apply bg-primary text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors;
+}
